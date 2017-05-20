@@ -19,7 +19,8 @@ function getRes (req) {
 
 function handleMessage (req, id, sendMessage) {
 	let response = getRes(req)
-	if (!response) response = getQuestionList()
+	let regex = new RegExp(req)
+	if ('แสดงคำสั่ง'.match(regex)) response = getQuestionList()
 
 	sendMessage(response, id).then(() => {
 		console.log(`respond to "${req}" success`)
