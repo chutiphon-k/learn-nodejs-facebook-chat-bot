@@ -6,8 +6,8 @@
   "author": "Chutiphon.k <chutiphon.k@ku.th>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./src/handleMessage.js --exec babel-node",
-    "prod": "cross-env NODE_ENV=production babel-node ./src/bin/server.js"
+    "dev": "cross-env NODE_ENV=development nodemon ./src/index.js --exec babel-node",
+    "prod": "cross-env NODE_ENV=production babel-node ./src/index.js"
   },
   "dependencies": {
     "config": "^1.26.1",

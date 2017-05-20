@@ -4,9 +4,9 @@ let responseMap = getResponseMap()
 let questionArr = getQuestionArr()
 
 function getQuestionList () {
-	let res = `สวัสดีครับ ตอนนี้เจมส์ไม่อยู่สามารถคุยกับ Bot ของผมได้`
+	let res = `สวัสดีครับ ตอนนี้เจมส์ไม่อยู่สามารถคุยกับ Chatbot ของผมได้\nคำสั่ง : `
 	questionArr.map((question, index) => {
-		res += `\n ${index + 1}. ${question}`
+		res += `\n - ${question}`
 	})
 	return res
 }
@@ -25,12 +25,8 @@ function handleMessage (req, id, sendMessage) {
 		console.log(`respond to "${req}" success`)
 		console.log(response)
 	}).catch(err => {
-		if (err) {
-			console.log(err)
-		}
+		if (err) console.log(err)
 	})
 }
 
-export {
-	handleMessage
-}
+export default handleMessage

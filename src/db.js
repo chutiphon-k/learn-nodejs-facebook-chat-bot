@@ -14,10 +14,10 @@ function getResponseMap () {
 }
 
 function getQuestionArr () {
-	let data = fs.readFileSync(`${databaseDir}/question.json`, 'utf8')
+	let data = fs.readFileSync(`${databaseDir}/respond.json`, 'utf8')
 	try {
 		let json = JSON.parse(data)
-		return json
+		return Object.keys(json)
 	} catch (err) {
 		console.log(err)
 	}
