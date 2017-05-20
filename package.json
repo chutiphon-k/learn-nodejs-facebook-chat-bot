@@ -6,7 +6,7 @@
   "author": "Chutiphon.k <chutiphon.k@ku.th>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./src/bin/server.js --exec babel-node",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/db.js --exec babel-node",
     "prod": "cross-env NODE_ENV=production babel-node ./src/bin/server.js"
   },
   "dependencies": {
